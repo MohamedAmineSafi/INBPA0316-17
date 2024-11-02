@@ -1,0 +1,73 @@
+body {
+    width: 50%;
+    border: thin solid black;
+    padding: 0.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    font-variant: small-caps;
+    letter-spacing: 0.25em;
+}
+
+header, h2, h3, section.scene > div.stagedir {
+    text-align: center;
+}
+
+section.scene > h3 {
+    border: thin solid red;
+    padding: 0.5em;
+}
+
+div.speaker {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.stagedir {
+    color: gray;
+    font-style: italic;
+}
+
+.stagedir::before {
+    content: "(";
+}
+
+.stagedir::after {
+    content: ")";
+}
+
+section.scene {
+    counter-reset: line-number;
+}
+
+div.line::after {
+    content: counter(line-number);
+    counter-increment: line-number;
+    float: right;
+}
+
+div.speech {
+    padding: 1em;
+}
+
+div.speech:nth-of-type(odd) {
+    background-color: aliceblue;
+    border-top: medium solid darkblue;
+}
+
+div.speech:nth-of-type(even) {
+    background-color: white;
+    border-top: medium solid lightgray;
+}
+
+div.stagedir {
+    padding: 0.5em;
+}
+
+nav, section.act {
+    border-top: medium solid black;
+}
